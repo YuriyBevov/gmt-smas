@@ -1,0 +1,27 @@
+.features {
+  &__list {
+    @extend .flex;
+    @extend .list-reset;
+    column-gap: 50px;
+    row-gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+    justify-content: center;
+
+    @include m-b-tablet-down {
+      flex-direction: column;
+      column-gap: 0;
+    }
+  }
+
+  &__list-item {
+    width: calc(50% - 25px);
+    height: 200px;
+
+    @include m-b-tablet-down {
+      width: 100%;
+      height: fit-content;
+      min-height: 200px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.notes-slider {
+  position: relative;
+  padding-bottom: 15px;
+
+  &-controls {
+    @extend .flex;
+    align-items: center;
+    position: absolute;
+    bottom: 65px;
+    right: 70px;
+    width: fit-content;
+    min-width: 200px;
+    height: 60px;
+    z-index: 10;
+
+    @include m-b-desktop-down {
+      bottom: 35px;
+      right: 30px;
+    }
+
+    @include m-b-down(620px) {
+      right: 5px;
+    }
+  }
+
+  .swiper-wrapper {
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(176, 140, 128, .5);
+
+    &-fraction {
+      width: 80px;
+    }
+
+    &-current {
+      color: var(--warning);
+    }
+  }
+}

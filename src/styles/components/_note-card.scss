@@ -1,0 +1,63 @@
+.note-card {
+  margin: 0 10px;
+  background-color: var(--light);
+  border-radius: 30px;
+  padding: 50px;
+  height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  grid-template-columns: 48% 50%;
+  grid-gap: 30px;
+
+  @include m-b-desktop-down {
+    padding: 30px;
+  }
+
+  @include m-b-down(620px) {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  img {
+    border-radius: 30px;
+  }
+
+  &__content {
+    @extend .flex-column;
+    padding: 30px 0;
+    padding-right: 15px;
+    padding-bottom: 65px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-style: 400;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--warning);
+
+    @include m-b-desktop-down {
+      font-size: 28px;
+    }
+
+    @include m-b-tablet-down {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    margin: auto 0;
+    color: var(--darkgray);
+
+    @include m-b-desktop-down {
+      font-size: 22px;
+    }
+
+    @include m-b-tablet-down {
+      font-size: 18px;
+    }
+  }
+}
