@@ -22,6 +22,7 @@
 @import "./components/staff-card";
 @import "./components/review-card";
 @import "./components/sticky-panel";
+
 /* Секции */
 @import "./views/intro";
 @import "./views/features";
@@ -31,6 +32,12 @@
 @import "./views/about";
 @import "./views/consult";
 @import "./views/reviews";
+@import "./views/advantages";
+@import "./views/procedure";
+@import "./views/notes";
+@import "./views/prices";
+@import "./views/appointment-form";
+
 /* Модальные окна */
 @import "./modals/modal";
 @import "./modals/offer-modal";

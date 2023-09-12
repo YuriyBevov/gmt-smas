@@ -52,7 +52,7 @@
     padding-right: 30px;
     margin-top: auto;
     border-top: 1px solid var(--info);
-    color: var(--warning);
+    color: #57c2cc;
 
     span {
       display: inline-block;
@@ -67,5 +67,10 @@
       transform: translateY(-50%);
       fill: var(--warning);
     }
+  }
+
+  &__link:first-of-type {
+    border-top: none;
+    margin-bottom: 20px;
   }
 }

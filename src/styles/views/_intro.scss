@@ -1,48 +1,85 @@
 .intro {
   position: relative;
   height: 100%;
-  min-height: 300px;
-  margin-bottom: 30px;
+  max-height: 532px;
+  margin-bottom: 80px;
 
-  @include m-b-mobile-lg-down {
-    background-color: rgba(0,0,0,.5);
+  @include m-b-laptop-down {
+    background: linear-gradient(93deg, #F5E8DF -14.32%, #D1C7BE 15.15%, #AEA59C 30.56%, #8F857B 99.77%);
+    display: flex;
+    align-items: center;
   }
 
   img {
+    position: absolute;
     height: 100%;
     min-height: inherit;
     object-fit: cover;
+
+    @include m-b-laptop-down {
+      display: none;
+    }
+  
   }
 
   &__content {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    margin-left: auto;
     height: 100%;
-    width: 100%;
+    width: 40%;
     @extend .flex-column;
-    padding: 0 30px;
-    padding-top: 80px;
-    padding-bottom: 20px;
-
-    align-items: flex-end;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
 
     @include m-b-desktop-down {
-      padding-top: 40px;
+      padding-top: 20px;
+    }
+
+    @include m-b-laptop-down {
+      width: 100%;
+      margin-left: 0;
     }
 
     @include m-b-mobile-lg-down {
       padding: 20px 15px;
-      //align-items: flex-start;
-      //left: 0;
-      background-color: rgba(0,0,0,.3);
     }
   }
 
   &__title {
     @extend .flex-column;
-    text-align: end;
-    line-height: 1.4;
+    text-align: center;
+
+    & strong {
+      font-size: 121px;
+
+      @include m-b-desktop-down {
+        font-size: 80px;
+      }
+
+      @include m-b-laptop-down {
+        font-size: 90px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 56px;
+      }
+    }
+    & span {
+      font-size: 56px;
+      margin-bottom: 25px;
+
+      @include m-b-desktop-down {
+        font-size: 34px;
+      }
+
+      @include m-b-laptop-down {
+        font-size: 50px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 28px;
+      }
+    }
 
     @include m-b-desktop-down {
       margin-bottom: 0;
@@ -55,21 +92,33 @@
   }
 
   &__desc {
-    font-size: 24px;
+    font-size: 35px;
     color: var(--gray);
+    text-align: center;
+    margin: 0;
 
     @include m-b-desktop-down {
+      font-size: 28px;
+    }
+
+    @include m-b-laptop-down {
+      font-size: 35px;
+    }
+
+    @include m-b-mobile-lg-down {
       font-size: 18px;
     }
   }
 
   &__button {
-    margin-top: auto;
-    margin-bottom: 40px;
-    max-width: 275px;
-    max-height: 60px;
-    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-width: 252px;
+    max-height: 53px;
+    font-size: 18px;
     font-weight: 300;
+    background-color: var(--white);
+    color: var(--darkgray);
 
     @include m-b-desktop-down {
       font-size: 18px;

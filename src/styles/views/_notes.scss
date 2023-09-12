@@ -1,0 +1,36 @@
+.notes {
+  padding-bottom: 80px;
+  &__grid {
+    margin: 0 10px;
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 86px 150px 86px 74px;
+    height: 100%;
+    box-shadow: 0px 4px 10px 2px rgba(176, 140, 128, 0.50);
+    backdrop-filter: blur(25px);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 128px;
+
+    @include m-b-down(1440px) {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    @include m-b-desktop-down {
+      padding: 30px;
+    }
+  
+    @include m-b-down(620px) {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    &-slider {
+        position: relative;
+    }
+  }
+}

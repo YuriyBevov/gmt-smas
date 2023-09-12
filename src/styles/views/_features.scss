@@ -1,14 +1,16 @@
 .features {
+  background-color: var(--brown);
+  padding: 50px 0;
+
   &__list {
     @extend .flex;
     @extend .list-reset;
     column-gap: 50px;
     row-gap: 30px;
-    max-width: 850px;
     margin: 0 auto;
     justify-content: center;
 
-    @include m-b-tablet-down {
+    @include m-b-down(1440px) {
       flex-direction: column;
       column-gap: 0;
     }
@@ -16,9 +18,9 @@
 
   &__list-item {
     width: calc(50% - 25px);
-    height: 200px;
+    min-height: 300px;
 
-    @include m-b-tablet-down {
+    @include m-b-down(1440px) {
       width: 100%;
       height: fit-content;
       min-height: 200px;
