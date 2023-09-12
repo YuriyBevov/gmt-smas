@@ -4,6 +4,7 @@
 
   &__list {
     @extend .flex-column;
+    @extend .list-reset;
 
     &-item {
       @extend .flex;
