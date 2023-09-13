@@ -1,5 +1,6 @@
 .procedure {
     background-color: var(--brown);
+    padding: 80px 0;
 
     &__grid {
         display: grid;
@@ -15,7 +16,6 @@
             width: 100%;
             border-radius: 50%;
             color: var(--white);
-            // padding: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -50,7 +50,7 @@
                 border: 5px dashed var(--white);
             }
 
-            @include adaptive-value("padding", 200, 200);
+            @include adaptive-value("padding", 160, 160);
 
             @include m-b-down(1740px) {
                 @include adaptive-value("padding", 150, 100);
@@ -74,7 +74,7 @@
                 p {
                     font-size: 24px; 
                 }
-                @include adaptive-value("padding", 130, 100);
+                @include adaptive-value("padding", 150, 100);
 
               }
 
@@ -102,14 +102,14 @@
                     transform: translate(0, -20px);
                 }
 
-                @include adaptive-value("padding", 130, 80);
+                @include adaptive-value("padding", 140, 80);
             }
 
             @include m-b-down(800px) {
-                @include adaptive-value("padding", 100, 50);
+                @include adaptive-value("padding", 110, 50);
             }
 
-            @include m-b-down(700px) {
+            @include m-b-down(710px) {
                 span {
                     font-size: 22px;         
                   }
@@ -118,15 +118,20 @@
                     font-size: 14px; 
                 }
 
-                @include adaptive-value("padding", 160, 80);
+                @include adaptive-value("padding", 190, 90);
             }
 
-            @include m-b-down(580px) {
+            @include m-b-down(650px) {
 
-                @include adaptive-value("padding", 150, 40);
+                @include adaptive-value("padding", 180, 70);
             }
 
-            @include m-b-down(470px) {
+            @include m-b-down(600px) {
+
+                @include adaptive-value("padding", 150, 50);
+            }
+
+            @include m-b-down(500px) {
 
                 &:nth-child(1) {
                     transform: translate(0, 10px);
@@ -143,12 +148,17 @@
                     font-size: 12px; 
                 }
 
-                @include adaptive-value("padding", 100, 40);
+                @include adaptive-value("padding", 100, 60);
+            }
+
+            @include m-b-down(460px) {
+
+                @include adaptive-value("padding", 95, 40);
             }
 
             @include m-b-down(400px) {
 
-                @include adaptive-value("padding", 90, 30);
+                @include adaptive-value("padding", 90, 25);
             }
 
             @include m-b-down(350px) {
