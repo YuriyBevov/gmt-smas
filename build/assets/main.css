@@ -3357,7 +3357,7 @@ a {
 
 .prices {
   background-color: var(--brown);
-  padding: 44px 0;
+  padding: 80px 0;
 }
 .prices__list-item {
   padding: 30px 5px 25px 5px;
@@ -3403,7 +3403,7 @@ a {
 }
 
 .appointment {
-  padding: 130px 0;
+  padding: 100px 0;
 }
 .appointment-form {
   width: 100%;
