@@ -1,17 +1,26 @@
 .prices {
   background-color: var(--brown);
-  padding: 80px 0;
 
   &__list {
     @extend .flex-column;
     @extend .list-reset;
+    max-width: 1200px;
+    margin: 0 auto;
 
     &-item {
       @extend .flex;
-      padding: 30px 5px 25px 5px;
+      padding: 25px 5px;
       border-bottom: 1px solid var(--white);
 
-      @include m-b-down(580px) {
+      @include m-b-down(960px) {
+        padding: 20px 5px;
+      }
+
+      @include m-b-tablet-down {
+        padding: 10px 5px;
+      }
+
+      @include m-b-down(480px) {
         flex-direction: column;
         gap: 16px;
       }
@@ -20,7 +29,6 @@
         color: var(--white);
         font-size: 24px;
         font-weight: 500;
-        line-height: 36.8px;
 
         @include m-b-laptop-down {
           font-size: 20px;
@@ -35,11 +43,25 @@
         }
       }
 
+      span:first-child {
+        width: calc(100% - 150px);
+        padding-right: 25px;
+
+        @include m-b-down(480px) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+
       span:nth-child(2) {
         margin-left: auto;
+        width: 150px;
+        text-align: right;
 
-        @include m-b-down(580px) {
+        @include m-b-down(480px) {
           margin-left: 0;
+          text-align: left;
+          width: 100%;
         }
       }
     }

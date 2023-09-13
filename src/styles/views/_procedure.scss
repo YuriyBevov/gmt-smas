@@ -1,178 +1,103 @@
 .procedure {
-    background-color: var(--brown);
-    padding: 80px 0;
+  background-color: var(--brown);
 
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+  &__list {
+    @extend .list-reset;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 
-        @include m-b-tablet-down {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &-item {
-            width: 100%;
-            border-radius: 50%;
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            @include m-b-tablet-down {
-                width: 70%;
-            }
-
-            span {
-                text-align: center;
-                font-size: 45px;
-                font-weight: 700;
-                margin-bottom: auto;   
-                margin: 0;           
-              }
-  
-              p {
-                  text-align: center;
-                  font-size: 34px;
-                  font-weight: 400;
-                  line-height: 1.5; 
-                  margin-bottom: auto;  
-              }
-
-            &:nth-child(1) {
-                transform: translate(50px, 0);
-                border: 5px solid var(--white);
-            }
-            &:nth-child(2) {
-                transform: translate(-50px, 0);
-                border: 5px dashed var(--white);
-            }
-
-            @include adaptive-value("padding", 160, 160);
-
-            @include m-b-down(1740px) {
-                @include adaptive-value("padding", 150, 100);
-              }
-            @include m-b-down(1480px) {
-                @include adaptive-value("padding", 130, 50);
-
-                &:nth-child(1) {
-                    transform: translate(30px, 0);
-                }
-                &:nth-child(2) {
-                    transform: translate(-30px, 0);
-                }
-              }
-
-            @include m-b-down(1350px) {
-                span {
-                    font-size: 34px;         
-                  }
-
-                p {
-                    font-size: 24px; 
-                }
-                @include adaptive-value("padding", 150, 100);
-
-              }
-
-            @include m-b-down(1200px) {
-                @include adaptive-value("padding", 130, 40);
-              }
-
-            @include m-b-laptop-down {
-
-                &:nth-child(1) {
-                    transform: translate(20px, 0);
-                }
-                &:nth-child(2) {
-                    transform: translate(-20px, 0);
-                }
-
-                @include adaptive-value("padding", 80, 30);
-            }
-
-            @include m-b-tablet-down {
-                &:nth-child(1) {
-                    transform: translate(0, 20px);
-                }
-                &:nth-child(2) {
-                    transform: translate(0, -20px);
-                }
-
-                @include adaptive-value("padding", 140, 80);
-            }
-
-            @include m-b-down(800px) {
-                @include adaptive-value("padding", 110, 50);
-            }
-
-            @include m-b-down(710px) {
-                span {
-                    font-size: 22px;         
-                  }
-
-                p {
-                    font-size: 14px; 
-                }
-
-                @include adaptive-value("padding", 190, 90);
-            }
-
-            @include m-b-down(650px) {
-
-                @include adaptive-value("padding", 180, 70);
-            }
-
-            @include m-b-down(600px) {
-
-                @include adaptive-value("padding", 150, 50);
-            }
-
-            @include m-b-down(500px) {
-
-                &:nth-child(1) {
-                    transform: translate(0, 10px);
-                }
-                &:nth-child(2) {
-                    transform: translate(0, -10px);
-                }
-
-                span {
-                    font-size: 16px;         
-                  }
-
-                p {
-                    font-size: 12px; 
-                }
-
-                @include adaptive-value("padding", 100, 60);
-            }
-
-            @include m-b-down(460px) {
-
-                @include adaptive-value("padding", 95, 40);
-            }
-
-            @include m-b-down(400px) {
-
-                @include adaptive-value("padding", 90, 25);
-            }
-
-            @include m-b-down(350px) {
-
-                &:nth-child(1) {
-                    transform: translate(0, 5px);
-                }
-                &:nth-child(2) {
-                    transform: translate(0, -5px);
-                }
-
-                @include adaptive-value("padding", 70, 15);
-            }
-
-        }
+    @include m-b-tablet-down {
+      flex-direction: column;
+      align-items: center;
     }
+  }
+
+  &__list-item {
+    width: 600px;
+    height: 600px;
+    border: 3px dashed var(--white);
+    border-radius: 50%;
+    padding: 150px 100px;
+
+    @include m-b-down(1180px) {
+      width: 400px;
+      height: 400px;
+      padding: 100px 60px;
+    }
+
+    @include m-b-mobile-lg-down {
+      width: 280px;
+      height: 280px;
+      padding: 50px 30px;
+    }
+
+    &-content {
+      @extend .flex-column;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: var(--white);
+
+        @include m-b-down(1180px) {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        margin: 0;
+        color: var(--white);
+
+        @include m-b-down(1180px) {
+          font-size: 18px;
+        }
+
+        @include m-b-mobile-lg-down {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: -30px;
+      border-style: solid;
+
+      @include m-b-down(1180px) {
+        margin-right: -20px;
+      }
+
+      @include m-b-tablet-down {
+        margin-right: 0;
+        margin-bottom: -25px;
+      }
+
+      @include m-b-mobile-lg-down {
+        margin-bottom: -15px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: -30px;
+
+      @include m-b-down(1180px) {
+        margin-left: -20px;
+      }
+
+      @include m-b-tablet-down {
+        margin-left: 0;
+        margin-top: -25px;
+      }
+
+      @include m-b-mobile-lg-down {
+        margin-top: -15px;
+      }
+    }
+  }
 }

@@ -9,6 +9,7 @@
 /* Шаблон */
 @import "./layout/header";
 @import "./layout/footer";
+
 /* Компоненты */
 @import "./components/loader";
 @import "./components/logo";
@@ -36,7 +37,7 @@
 @import "./views/procedure";
 @import "./views/notes";
 @import "./views/prices";
-@import "./views/appointment-form";
+@import "./views/appointment";
 
 /* Модальные окна */
 @import "./modals/modal";

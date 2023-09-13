@@ -27,7 +27,7 @@
 }
 
 @mixin m-b-tablet-down {
-  @media (max-width: (867px)) {
+  @media (max-width: (767px)) {
     @content;
   }
 }
@@ -53,7 +53,7 @@
 }
 
 @mixin m-b-desktop-up {
-  @media (min-width: (1200px)) {
+  @media (min-width: (1440px)) {
     @content;
   }
 }
@@ -65,7 +65,7 @@
 }
 
 @mixin m-b-tablet-up {
-  @media (min-width: (868px)) {
+  @media (min-width: (768px)) {
     @content;
   }
 }

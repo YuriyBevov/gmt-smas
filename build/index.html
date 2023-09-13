@@ -77,27 +77,33 @@
   </div>
 </section>
 <section class="lw-section procedure">
-    <div class="lw-container">
+  <div class="lw-container">
+    <h2 class="lw-section-title lw-section-title--white">форматы процедур</h2>
 
-        <h2 class="lw-section-title lw-section-title--white">форматы процедур</h2>
+    <ul class="procedure__list">
+      <li class="procedure__list-item">
+        <div class="procedure__list-item-content">
+          <span>КОГДА НУЖЕН ЛИФТИНГ</span>
 
-        <div class="procedure__grid">
-           <div class="procedure__grid-item">
-              <span>КОГДА НУЖЕН ЛИФТИНГ</span>
-              <p>
-                Процедура SMAS лифтинга по лицу и телу на линейных и круговых картриджах. 
-                Комплементарно для WOW-эффекта – сыворотка в завершении протокола
-              </p>
-           </div>
-           <div class="procedure__grid-item">
-            <span>КОГДА НУЖНА СИЯЮЩАЯ КОЖА</span>
-            <p>
-                Процедура для улучшения качества кожи, тонизация и осветление (сыворотка DSB + круговой картридж 1,5 мм)
-            </p>
-           </div>
+          <p>
+            Процедура SMAS лифтинга по лицу и телу на линейных и круговых картриджах.
+            Комплементарно для WOW-эффекта - сыворотка в завершении протокола
+          </p>
         </div>
-    </div>
+      </li>
+      <li class="procedure__list-item">
+        <div class="procedure__list-item-content">
+          <span>КОГДА НУЖНА СИЯЮЩАЯ КОЖА</span>
+
+          <p>
+            Процедура для улучшения качества кожи, тонизация и осветление (сыворотка DSB + круговой картридж 1,5 мм)
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
+
 <section class="lw-section notes">
   <div class="lw-container">
 
@@ -123,15 +129,15 @@
         <div class="swiper notes-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./assets/img/note_1.png" alt="Миф 1" class="note-card__img">
+              <img src="./assets/img/note_1.png" alt="Результат 1">
             </div>
 
             <div class="swiper-slide">
-              <img src="./assets/img/note_1.png" alt="Миф 2" class="note-card__img">
+              <img src="./assets/img/note_1.png" alt="Результат 2">
             </div>
 
             <div class="swiper-slide">
-              <img src="./assets/img/note_1.png" alt="Миф 3" class="note-card__img">
+              <img src="./assets/img/note_1.png" alt="Результат 3">
             </div>
           </div>
         </div>
@@ -410,42 +416,42 @@
 
         <ul class="prices__list">
             <li class="prices__list-item">
-                <span class="prices-card__description">
+                <span>
                     Лифтинг booster + сыворотка DSB Лицо (300 линий)
                 </span>
-                <span class="prices-card__description">
+                <span class="prices__list-itemdescription">
                     36 000 руб.
                 </span>
             </li>
             <li class="prices__list-item">
-                <span class="prices-card__description">
+                <span>
                     Лицо полностью (500 линий)
                 </span>
-                <span class="prices-card__description">
+                <span>
                     56 000 руб.
                 </span>
             </li>
             <li class="prices__list-item">
-                <span class="prices-card__description">
+                <span>
                     Область плеч/коленей (до 600 линий)
                 </span>
-                <span class="prices-card__description">
+                <span>
                     66 000 руб.
                 </span>
             </li>
             <li class="prices__list-item">
-                <span class="prices-card__description">
+                <span>
                     Средняя+нижняя треть лица (400 линий)
                 </span>
-                <span class="prices-card__description">
+                <span>
                     48 000 руб.
                 </span>
             </li>
             <li class="prices__list-item">
-                <span class="prices-card__description">
+                <span>
                     Ягодицы (до 600 линий) 66 000 руб.
                 </span>
-                <span class="prices-card__description">
+                <span>
                     66 000 руб.
                 </span>
             </li>
@@ -454,33 +460,32 @@
 </section>
 
 <section class="lw-section appointment">
-    <div class="lw-container">
+  <div class="lw-container">
+    <h2 class="lw-section-title">Записаться на приём</h2>
 
-        <h2 class="lw-section-title">Записаться на приём</h2>
+    <form class="appointment-form" action="./mail.php" method="POST" id="appointment-form">
+      <div class="appointment-form__field">
+        <label for="appointment_user_name">Имя</label>
+        <input class="lw-main-input" type="text" name="Имя" placeholder="Ваше имя" id="appointment_user_name" data-required="">
+      </div>
 
-        <form class="appointment-form" action="./mail.php" method="POST" id="appointment-form">
+      <div class="appointment-form__field">
+        <label for="appointment_user_phone">Номер телефона</label>
+        <input class="lw-main-input" type="tel" name="Телефон" placeholder="Ваш номер телефона" id="appointment_user_phone" data-required="">
+      </div>
 
-            <div class="appointment-form__field">
-                <label for="Имя">Имя</label>
-              <input class="lw-main-input" type="text" name="Имя" placeholder="Ваше имя" id="appointment_user_name" data-required="">
-            </div>
-          
-            <div class="appointment-form__field">
-                <label for="Телефон">Номер телефона</label>
-              <input class="lw-main-input" type="tel" name="Телефон" placeholder="Ваш номер телефона" id="appointment_user_phone" data-required="">
-            </div>
-          
-            <div class="appointment-form__field">
-                <label for="Комментарий">Комментарий к заявке</label>
-              <textarea class="lw-main-textarea" name="Комментарий" placeholder="" id="appointment_user_comment"></textarea>
-            </div>
-          
-            <div class="appointment-form__footer">
-              <button class="lw-btn lw-btn-outlined" type="submit">Записаться на приём </button>
-            </div>
-          </form>
-    </div>
+      <div class="appointment-form__field">
+        <label for="appointment_user_comment">Комментарий к заявке</label>
+        <textarea class="lw-main-textarea" name="Комментарий" placeholder="" id="appointment_user_comment"></textarea>
+      </div>
+
+      <div class="appointment-form__footer">
+        <button class="lw-btn lw-btn-outlined" type="submit">Записаться на приём </button>
+      </div>
+    </form>
+  </div>
 </section>
+
 
 
 
