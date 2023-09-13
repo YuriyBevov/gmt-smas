@@ -28,15 +28,10 @@
     padding: 20px;
   }
 
-  @include m-b-down(768px) {
- 
-  }
-
   &__side {
     @extend .flex-centered-content;
     flex-direction: column;
     padding: 10px;
-    max-height: 180px;
 
     &::-webkit-scrollbar {
       background-color: transparent;
