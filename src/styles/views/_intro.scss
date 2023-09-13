@@ -1,11 +1,10 @@
 .intro {
   position: relative;
-  margin: 0 auto;
-  /*margin-bottom: 80px;*/
+
   max-width: 1920px;
   height: 100%;
   min-height: 535px;
-
+  margin: 0 auto;
   background: linear-gradient(93deg, #F5E8DF -14.32%, #D1C7BE 15.15%, #AEA59C 30.56%, #8F857B 99.77%);
 
   @include m-b-down(1320px) {
@@ -45,6 +44,8 @@
       position: absolute;
       left: 60px;
       bottom: 0;
+      max-width: fit-content;
+      max-width: 846px;
 
       @include m-b-down(1480px) {
         left: 0;
