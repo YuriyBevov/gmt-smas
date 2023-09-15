@@ -6,10 +6,6 @@ const notesSlider = document.querySelector('.notes-slider');
 if(notesSlider) {
   new Swiper(notesSlider, {
     spaceBetween: 40,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
 
     autoplay: true,
     speed: 2500,
@@ -21,6 +17,30 @@ if(notesSlider) {
     navigation: {
       nextEl: ".notes-slider-button-next",
       prevEl: ".notes-slider-button-prev",
+    },
+  });
+}
+
+const advantagesSlider = document.querySelector('.advantages-slider');
+
+if(advantagesSlider) {
+  new Swiper(advantagesSlider, {
+    spaceBetween: 40,
+    pagination: {
+      el: ".advantages-slider-pagination",
+      type: "fraction",
+    },
+
+    autoplay: true,
+    speed: 2500,
+
+    autoplay: {
+      delay: 2500,
+    },
+
+    navigation: {
+      nextEl: ".advantages-slider-button-next",
+      prevEl: ".advantages-slider-button-prev",
     },
   });
 }
